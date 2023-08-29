@@ -3,12 +3,18 @@
     src: url("assets/norse-bold.otf") format("opentype");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
+    font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
     background-color: #233D64;
 }
 
@@ -34,10 +40,9 @@ body {
 }
 
 .banner > p {
-    font-family: "Norse Bold", sans-serif;
+    font-family: "Norse Bold", system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 5rem;
     color: white;
-    margin: 0;
     padding-top: 20px;
 }
 
@@ -47,14 +52,15 @@ body {
 }
 
 .scroll-text {
-    font-family: "Norse Bold";
-    font-size: 1.3rem;
+    font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
     color: white;
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .down-arrow-container {
+    height: 50px;
     width: 60px;
     text-align: center;
     margin-bottom: 20px;
@@ -97,4 +103,56 @@ body {
 
 .form-container {
     height: 100vh;
+    color: white;
+    padding: 35px 90px 0;
+}
+
+.form-header {
+    text-align: center;
+}
+
+.form-header > h1 {
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-row > input {
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+}
+
+.form-row > label {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+
+.form-row > button {
+    font-family: inherit;
+    background-color: #233D64;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 25px;
+}
+
+.login > a {
+    text-decoration: underline;
+}
+
+.login > a:visited {
+    color: white;
 }
