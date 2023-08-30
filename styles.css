@@ -122,10 +122,11 @@ body {
 .form-row {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-row > input {
+    font-size: 1rem;
     color: white;
     background-color: transparent;
     padding: 7px;
@@ -145,6 +146,7 @@ body {
 
 .form-row > button {
     font-family: inherit;
+    font-size: 1.1rem;
     background-color: #ff99ab;
     border: none;
     color: #233D64;
@@ -166,7 +168,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 4px;
-    margin-top: 25px;
 }
 
 .login > a,
@@ -186,4 +187,70 @@ body {
 .login > a:active {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
+}
+
+@media only screen and (min-width: 900px) {
+    body {
+        display: flex;
+    }
+
+    .page-left {
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 30vw;
+    }
+
+    .page-right {
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis: 60vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scroll-text,
+    .down-arrow-container {
+        display: none;
+    }    
+
+    .form-container {
+        height: fit-content;
+        padding-top: 0;
+        display: grid;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+    }
+
+    form > .form-row:last-child {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .form-row {
+        min-width: 200px;
+    }
+
+    .form-row > button {
+        width: fit-content;
+        cursor: pointer;
+        margin-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-row > button:hover {
+        transform: scale(1.05);
+    }
+
+    .login > a {
+        cursor: pointer;
+    }
 }
