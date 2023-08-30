@@ -68,6 +68,10 @@ body {
     border: none;
 }
 
+.down-arrow-container:focus-visible {
+    outline: 3px solid #ff99ab;
+}
+
 .down-arrow {
     border: solid white;
     border-width: 0 6px 6px 0;
@@ -122,9 +126,16 @@ body {
 }
 
 .form-row > input {
+    color: white;
+    background-color: transparent;
     padding: 7px;
-    border: none;
+    border: 1px solid white;
     border-radius: 3px;
+}
+
+.form-row > input:focus {
+    border-color: #ff99ab;
+    outline: 3px solid #ff99ab;
 }
 
 .form-row > label {
@@ -134,25 +145,45 @@ body {
 
 .form-row > button {
     font-family: inherit;
-    background-color: #233D64;
-    border: 1px solid white;
-    color: white;
+    background-color: #ff99ab;
+    border: none;
+    color: #233D64;
     border-radius: 5px;
     margin-top: 15px;
     padding: 10px;
 }
 
+.form-row > button:active {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.form-row > button:focus-visible {
+    outline: 3px solid white;
+}
+
 .login {
     display: flex;
     justify-content: center;
-    gap: 3px;
+    gap: 4px;
     margin-top: 25px;
 }
 
-.login > a {
+.login > a,
+.login > a:link {
+    color: white;
     text-decoration: underline;
 }
 
 .login > a:visited {
     color: white;
+}
+
+.login > a:focus-visible {
+    outline: 3px solid #ff99ab;
+}
+
+.login > a:active {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
 }
