@@ -144,7 +144,7 @@ body {
     margin-bottom: 5px;
 }
 
-.form-row > button {
+.submit-btn {
     font-family: inherit;
     font-size: 1.1rem;
     background-color: #ff99ab;
@@ -155,12 +155,12 @@ body {
     padding: 10px;
 }
 
-.form-row > button:active {
+.submit-btn:active {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
 }
 
-.form-row > button:focus-visible {
+.submit-btn:focus-visible {
     outline: 3px solid white;
 }
 
@@ -238,7 +238,7 @@ body {
         min-width: 200px;
     }
 
-    .form-row > button {
+    .submit-btn {
         width: fit-content;
         cursor: pointer;
         margin-top: 30px;
@@ -246,7 +246,7 @@ body {
         padding-right: 20px;
     }
 
-    .form-row > button:hover {
+    .submit-btn:hover {
         transform: scale(1.05);
     }
 
