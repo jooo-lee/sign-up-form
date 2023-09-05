@@ -6,6 +6,7 @@ const phone = document.querySelector("#phone");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm_password");
 const submitBtn = document.querySelector(".submit-btn");
+const inputs = document.querySelectorAll("input");
 
 downArrow.addEventListener("click", scrollToFormContainer);
 firstName.addEventListener("input", showCat);
@@ -18,6 +19,9 @@ confirmPassword.addEventListener("input", clearCustomValidity);
 confirmPassword.addEventListener("input", validatePasswords);
 submitBtn.addEventListener("click", displayPhoneMsg);
 submitBtn.addEventListener("click", displayPasswordsMsg);
+inputs.forEach(input => {
+    input.addEventListener("input", addPaddingRight);
+});
 
 // ------------------------------ Callbacks ------------------------------
 
@@ -46,6 +50,8 @@ function validatePhone() {
 }
 
 // Add and remove classes to password fields to show proper cat emoji
+// Cat emoji for both password fields only shown after there is input in 
+// confirm password field
 function validatePasswords() {
     if (password.value === confirmPassword.value && password.value !== "") {
         if (
@@ -89,4 +95,16 @@ function displayPasswordsMsg() {
     } else {
         confirmPassword.setCustomValidity("Passwords must match!");
     }
+}
+
+function addPaddingRight(e) {
+    // Cat emoji is only added to password field after there is input for the confirm
+    // password field, so only add right padding to password field after input in
+    // confirm password field or else this looks strange with Safari's autofill icon
+    if (e.target.id === "password") {
+        return;
+    } else if (e.target.id === "confirm_password") {
+        password.style.paddingRight = "32px";
+    }
+    e.target.style.paddingRight = "32px";
 }
