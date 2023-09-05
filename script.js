@@ -15,6 +15,7 @@ phone.addEventListener("input", clearCustomValidity);
 phone.addEventListener("input", validatePhone);
 password.addEventListener("input", clearCustomValidity);
 confirmPassword.addEventListener("input", clearCustomValidity);
+confirmPassword.addEventListener("input", validatePasswords);
 submitBtn.addEventListener("click", displayPhoneMsg);
 submitBtn.addEventListener("click", displayPasswordsMsg);
 
@@ -40,6 +41,30 @@ function validatePhone(e) {
             e.target.classList.remove("validPhone");
         }
         e.target.classList.add("invalidPhone");
+    }
+}
+
+function validatePasswords(e) {
+    if (password.value === confirmPassword.value && password.value !== "") {
+        if (
+            password.classList.contains("notMatching") && 
+            confirmPassword.classList.contains("notMatching")
+        ) {
+            password.classList.remove("notMatching");
+            confirmPassword.classList.remove("notMatching");
+        }
+        password.classList.add("matching");
+        confirmPassword.classList.add("matching");
+    } else {
+        if (
+            password.classList.contains("matching") && 
+            confirmPassword.classList.contains("matching")
+        ) {
+            password.classList.remove("matching");
+            confirmPassword.classList.remove("matching");
+        }
+        password.classList.add("notMatching");
+        confirmPassword.classList.add("notMatching");
     }
 }
 

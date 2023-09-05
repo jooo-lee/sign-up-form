@@ -145,13 +145,15 @@ body {
     top: -30px;
 }
 
+.showCat:valid + span::before,
 .validPhone + span::before,
-.showCat:valid + span::before {
+.matching + span::before {
     content: "😸";
 }
 
+.showCat:invalid + span::before,
 .invalidPhone + span::before,
-.showCat:invalid + span::before {
+.notMatching + span::before {
     content: "😾";
 }
 
