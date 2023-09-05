@@ -134,6 +134,27 @@ body {
     border-radius: 3px;
 }
 
+.form-row > input + span {
+    position: relative;
+}
+
+.form-row > input + span::before {
+    font-size: 1.3rem;
+    position: absolute;
+    right: 10px;
+    top: -30px;
+}
+
+.validPhone + span::before,
+.showCat:valid + span::before {
+    content: "😸";
+}
+
+.invalidPhone + span::before,
+.showCat:invalid + span::before {
+    content: "😾";
+}
+
 .form-row > input:focus {
     border-color: #ff99ab;
     outline: 3px solid #ff99ab;
