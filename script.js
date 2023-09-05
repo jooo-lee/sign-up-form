@@ -3,9 +3,9 @@ const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
-const submitBtn = document.querySelector(".submit-btn");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm_password");
+const submitBtn = document.querySelector(".submit-btn");
 
 downArrow.addEventListener("click", scrollToFormContainer);
 firstName.addEventListener("input", showCat);
@@ -29,22 +29,24 @@ function showCat(e) {
     e.target.classList.add("showCat");
 }
 
-function validatePhone(e) {
+// Add and remove classes to phone field to show proper cat emoji
+function validatePhone() {
     const constraint = new RegExp("^[0-9]{10}$");
     if (constraint.test(phone.value)) {
-        if (e.target.classList.contains("invalidPhone")) {
-            e.target.classList.remove("invalidPhone");
+        if (phone.classList.contains("invalidPhone")) {
+            phone.classList.remove("invalidPhone");
         }
-        e.target.classList.add("validPhone");    
+        phone.classList.add("validPhone");    
     } else {
-        if (e.target.classList.contains("validPhone")) {
-            e.target.classList.remove("validPhone");
+        if (phone.classList.contains("validPhone")) {
+            phone.classList.remove("validPhone");
         }
-        e.target.classList.add("invalidPhone");
+        phone.classList.add("invalidPhone");
     }
 }
 
-function validatePasswords(e) {
+// Add and remove classes to password fields to show proper cat emoji
+function validatePasswords() {
     if (password.value === confirmPassword.value && password.value !== "") {
         if (
             password.classList.contains("notMatching") && 
