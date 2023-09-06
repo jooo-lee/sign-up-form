@@ -12,7 +12,7 @@ For desktop and larger screens:
 
 For mobile and smaller screens:
 
-<img src="./assets/demo-img-mobile1.png" alt="demo image for mobile 1" width="200px"><img src="./assets/demo-img-mobile2.png" alt="demo image for mobile 2" width="200px">
+<img src="./assets/demo-img-mobile1.png" alt="demo image for mobile 1" width="300px"><img src="./assets/demo-img-mobile2.png" alt="demo image for mobile 2" width="300px">
 
 ## Features:
 
