@@ -37,4 +37,5 @@ For mobile and smaller screens:
 ## Acknowledgements:
 
 [Photo](https://unsplash.com/photos/a-large-body-of-water-with-mountains-in-the-background-Z6RT0qH1Oec) by Marek Piwnicki on Unsplash.
-[Favicon](https://icons8.com/icon/25055/mountain) by [Icons8](https://icons8.com)
+
+[Favicon](https://icons8.com/icon/25055/mountain) by [Icons8](https://icons8.com).
